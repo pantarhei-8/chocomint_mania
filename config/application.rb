@@ -12,7 +12,7 @@ module ChocomintMania
     config.load_defaults 6.0
     config.generators do |g|
       g.assets false
-      g.skip_routes true
+      g.skip_routes false
       g.test_framework :rspec,    # RSpecを使用
         controller_specs: false,  # controller specは作らない
         view_specs: false,        # view specは作らない
