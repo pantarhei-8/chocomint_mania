@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/show'
-  get 'users/update'
+  devise_for :users
   root 'tops#index'
   get :terms_of_service, to: 'tops#terms'
+  resources :users, only: [:index, :show, :edit, :udate]
 end
