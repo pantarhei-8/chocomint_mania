@@ -3,7 +3,13 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to '利用規約', root_path %></li>
-        <li><%= link_to '新規アカウント作成', new_user_registration_path, class: "sign-up" %></li>
+      <% if user_signed_in? %>
+        <%= link_to current_user.name, "#", class: "user-name" %>
+        <%= link_to 'ログアウト',  destroy_user_session_path, method: :delete, class: "logout" %>
+      <% else %>
+        <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+        <%= link_to '新規アカウント作成', new_user_registration_path, class: "sign-up" %>
+      <% end %>
       </ul>
     </nav>
   </div>
