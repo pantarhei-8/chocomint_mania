@@ -18,7 +18,8 @@ module ChocomintMania
         view_specs: false,        # view specは作らない
         helper_specs: false,      # helper specは作らない
         routing_specs: false      # routing specは作らない
-    end
+      end
+    config.i18n.default_locale = :ja
 
 
     # Settings in config/environments/* take precedence over those specified here.

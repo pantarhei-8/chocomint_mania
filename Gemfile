@@ -62,3 +62,7 @@ gem 'pry-rails'
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'devise'
+
+gem 'rails-i18n'
